@@ -18,8 +18,6 @@ library.add(faCoffee)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(BootstrapVue);
 
-
-
 Vue.config.productionTip = false
 
 new Vue({
