@@ -130,7 +130,7 @@
     <!-- Modals -->
 
     <!-- Modal 1-->
-    <b-modal size="xl" id="portfolioModal1" tabindex="-1" role="article" aria-hidden="true">
+    <b-modal size="xl" id="portfolioModal1" tabindex="-1" role="article" aria-hidden="true" hide-footer="true">
         <b-modal-content>
           <b-container>
             <b-row>
