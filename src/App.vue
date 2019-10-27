@@ -1,6 +1,5 @@
 <template>
   <v-app id="app">
-    <navBar />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -28,6 +27,8 @@
     />
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet" />
+    <router-view/>
+    <navBar/>
   </v-app>
 </template>
 
