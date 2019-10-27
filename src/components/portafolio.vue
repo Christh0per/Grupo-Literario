@@ -130,7 +130,7 @@
     <!-- Modals -->
 
     <!-- Modal 1-->
-    <b-modal size="xl" id="portfolioModal1" tabindex="-1" role="article" aria-hidden="true" hide-footer="true">
+    <b-modal id="portfolioModal1" tabindex="-1" role="article" aria-hidden="true" size="xl" hide-footer="true">
         <b-modal-content>
           <b-container>
             <b-row>
@@ -158,7 +158,7 @@
     </b-modal>
 
     <!-- Modal 2-->
-    <b-modal id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <b-modal id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true" size="xl" hide-footer="true">
       <b-modal-dialog>
         <b-modal-content>
           <b-container>
@@ -188,7 +188,7 @@
     </b-modal>
 
     <!-- Modal 3-->
-    <b-modal id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <b-modal id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true" size="xl" hide-footer="true">
       <b-modal-dialog>
         <b-modal-content>
           <b-container>
@@ -218,7 +218,7 @@
     </b-modal>
 
     <!-- Modal 4-->
-    <b-modal id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <b-modal id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true" size="xl" hide-footer="true">
       <b-modal-dialog>
         <b-modal-content>
           <b-container>
@@ -248,7 +248,7 @@
     </b-modal>
 
     <!-- Modal 5-->
-    <b-modal id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <b-modal id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true" size="xl" hide-footer="true">
       <b-modal-dialog>
         <b-modal-content>
           <b-container>
@@ -278,7 +278,7 @@
     </b-modal>
 
     <!-- Modal 6-->
-    <b-modal id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <b-modal id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true" size="xl" hide-footer="true">
       <b-modal-dialog>
         <b-modal-content>
           <b-container>
