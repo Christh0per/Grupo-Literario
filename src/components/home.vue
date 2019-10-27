@@ -1,52 +1,45 @@
 <template>
-  <v-app id="navBar">
-    <!-- Navigation -->
-    
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <v-app id="home">
+    <!-- Header -->
+    <header class="masthead">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Grupo Literario</a>
-        <button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          Menu
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services-section">Eventos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portafolio-section">Portafolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about-section">Linea de Tiempo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team-section">Socios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact-section">Contacto</a>
-            </li>
-          </ul>
+        <div class="intro-text">
+          <div class="intro-lead-in">Bienvenido a Literario Ñuble</div>
+          <div class="intro-heading text-uppercase">Descubre el mundo de la literatura</div>
+          <a
+            class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+            href="#services"
+          >Tell Me More</a>
         </div>
       </div>
-    </nav>
+    </header>
+
+    <div class="container">
+      <services id="services-section" />
+      <portafolio id="portafolio-section" />
+      <about id="about-section" />
+      <team id="team-section" />
+    </div>
+    <clients />
+    <contact id="contact-section" />
   </v-app>
 </template>
 
 <script>
+import portafolio from "./portafolio";
+import about from "./about";
+import services from "./services";
+import team from "./team";
+import contact from "./contact";
 
 export default {
-  name: "NavBar",
+  name: "Home",
   components: {
+    portafolio,
+    services,
+    about,
+    team,
+    contact,
   },
   data: () => ({
     flat: false,
@@ -114,6 +107,9 @@ h6 {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.page-section {
+  padding: 100px 0;
+}
 
 .page-section h2.section-heading {
   font-size: 40px;
@@ -132,6 +128,11 @@ h6 {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0;
+  }
+}
 
 ::-moz-selection {
   background: #fed136;
@@ -215,7 +216,72 @@ h6 {
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
-
+.page-section {
+  padding: 100px 0;
+}
+.page-section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.page-section h3.section-subheading {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0;
+  }
+}
+::-moz-selection {
+  background: #fed136;
+  text-shadow: none;
+}
+::selection {
+  background: #fed136;
+  text-shadow: none;
+}
+img::-moz-selection {
+  background: 0 0;
+}
+img::selection {
+  background: 0 0;
+}
+img::-moz-selection {
+  background: 0 0;
+}
+.btn {
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+}
+.btn-xl {
+  font-size: 18px;
+  padding: 20px 40px;
+}
+.btn-primary {
+  background-color: #fed136;
+  border-color: #fed136;
+}
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+  background-color: #fec810 !important;
+  border-color: #fec810 !important;
+  color: #fff;
+}
+.btn-primary:active,
+.btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+}
 
 #mainNav {
   background-color: #212529;
@@ -302,6 +368,20 @@ header.masthead {
   background-size: cover;
 }
 
+header.masthead .intro-text {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+header.masthead .intro-text .intro-lead-in {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 22px;
+  margin-bottom: 25px;
+  font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
 header.masthead .intro-text .intro-heading {
   font-size: 50px;
@@ -313,7 +393,28 @@ header.masthead .intro-text .intro-heading {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-
-
-
+@media (min-width: 768px) {
+  header.masthead .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+  header.masthead .intro-text .intro-lead-in {
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    margin-bottom: 25px;
+    font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 50px;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+}
 </style>
