@@ -130,8 +130,7 @@
     <!-- Modals -->
 
     <!-- Modal 1-->
-    <b-modal id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <b-modal-dialog>
+    <b-modal size="xl" id="portfolioModal1" tabindex="-1" role="article" aria-hidden="true">
         <b-modal-content>
           <b-container>
             <b-row>
@@ -156,7 +155,6 @@
             </b-row>
           </b-container>
         </b-modal-content>
-      </b-modal-dialog>
     </b-modal>
 
     <!-- Modal 2-->
