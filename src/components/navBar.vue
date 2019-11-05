@@ -1,5 +1,5 @@
 <template>
-  <v-app id="navBar">
+  <div id="navBar">
     <!-- Navigation -->
     
 
@@ -39,7 +39,7 @@
         </div>
       </div>
     </nav>
-  </v-app>
+  </div>
 </template>
 
 <script>
