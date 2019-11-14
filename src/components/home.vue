@@ -7,9 +7,9 @@
           <div class="intro-lead-in">Bienvenido a Literario Ñuble</div>
           <div class="intro-heading text-uppercase">Descubre el mundo de la literatura</div>
           <a
-            class="btn btn-primary btn-xl text-uppercase js-scroll-trigger"
+            class="btn btn-primary btn-xl text-white text-uppercase js-scroll-trigger"
             href="#services"
-          >Tell Me More</a>
+          >Cuéntame mas</a>
         </div>
       </div>
     </header>
@@ -54,21 +54,6 @@ export default {
   })
 };
 </script>
-
-<!-- Bootstrap core JavaScript 
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript 
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Contact form JavaScript 
-  <script src="/js/jqBootstrapValidation.js"></script>
-  <script src="/js/contact_me.js"></script>
-
-  <!-- Custom scripts for this template 
-  <script src="./js/agency.min.js"></script>
-  -->
 
 <style>
 

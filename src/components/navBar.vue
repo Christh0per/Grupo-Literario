@@ -1,11 +1,14 @@
 <template>
   <v-app id="navBar">
     <!-- Navigation -->
-    
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Grupo Literario</a>
+          <router-link to="/">
+          <a href="" class="navbar-brand js-scroll-trigger">
+            Grupo Literario
+          </a>
+          </router-link>
         <button
           class="navbar-toggler navbar-toggler-right"
           type="button"
@@ -44,10 +47,11 @@
 
 <script>
 
+import $ from 'jquery';
+
 export default {
   name: "NavBar",
-  components: {
-  },
+  components: {},
   data: () => ({
     flat: false,
     media: true,
@@ -58,27 +62,26 @@ export default {
     raised: false,
     width: 344,
     height: undefined
-  })
+  }),
+  mounted() {
+    $(window).scroll(function(event) {
+      var scrollTop = $(window).scrollTop();
+      //console.log("Vertical " + scrollTop);
+
+      if(scrollTop > 180) {
+        // Agregar clase al navbar
+        $("#mainNav").addClass("navbar-shrink");
+        console.log('Funka');
+      } else {
+        $("#mainNav").removeClass("navbar-shrink");
+      }
+    });
+  }
 };
 </script>
 
-<!-- Bootstrap core JavaScript 
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript 
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Contact form JavaScript 
-  <script src="/js/jqBootstrapValidation.js"></script>
-  <script src="/js/contact_me.js"></script>
-
-  <!-- Custom scripts for this template 
-  <script src="./js/agency.min.js"></script>
-  -->
 
 <style>
-
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -114,7 +117,6 @@ h6 {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-
 .page-section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
@@ -131,7 +133,6 @@ h6 {
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
 
 ::-moz-selection {
   background: #fed136;
@@ -215,7 +216,6 @@ h6 {
     "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji";
 }
-
 
 #mainNav {
   background-color: #212529;
@@ -302,7 +302,6 @@ header.masthead {
   background-size: cover;
 }
 
-
 header.masthead .intro-text .intro-heading {
   font-size: 50px;
   font-weight: 700;
@@ -312,8 +311,4 @@ header.masthead .intro-text .intro-heading {
     Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
-
-
-
 </style>
