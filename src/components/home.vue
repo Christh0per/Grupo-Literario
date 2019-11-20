@@ -13,13 +13,10 @@
         </div>
       </div>
     </header>
-
-    <div class="container">
       <services id="services-section" />
       <portafolio id="portafolio-section" />
       <about id="about-section" />
       <team id="team-section" />
-    </div>
     <contact id="contact-section" />
   </div>
 </template>

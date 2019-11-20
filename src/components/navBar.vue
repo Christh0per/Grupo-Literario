@@ -64,13 +64,12 @@ export default {
     height: undefined
   }),
   mounted() {
-    $(window).scroll(function(event) {
+    $(window).scroll(function() {
       var scrollTop = $(window).scrollTop();
       //console.log("Vertical " + scrollTop);
       if(scrollTop > 180) {
         // Agregar clase al navbar
         $("#mainNav").addClass("navbar-shrink");
-        console.log('Funka');
       } else {
         $("#mainNav").removeClass("navbar-shrink");
       }
@@ -78,7 +77,6 @@ export default {
   },
   methods: {
     navigate() {
-      console.log();
       if(this.$route.path != '/') {
         this.$router.push('home');
       }

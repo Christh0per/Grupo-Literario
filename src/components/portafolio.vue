@@ -310,12 +310,10 @@
 </template>
 
 <script>
-import news from "./news";
 
 export default {
   name: "Portafolio",
   components: {
-    news
   }
 };
 </script>
