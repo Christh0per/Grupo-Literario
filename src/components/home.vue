@@ -1,5 +1,5 @@
 <template>
-  <v-app id="home">
+  <div id="home">
     <!-- Header -->
     <header class="masthead">
       <div class="container">
@@ -20,9 +20,8 @@
       <about id="about-section" />
       <team id="team-section" />
     </div>
-    <clients />
     <contact id="contact-section" />
-  </v-app>
+  </div>
 </template>
 
 <script>

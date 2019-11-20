@@ -1,5 +1,5 @@
 <template>
-  <v-app id="navBar">
+  <div id="navBar">
     <!-- Navigation -->
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -23,26 +23,26 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
+            <li class="nav-item" v-on:click="navigate()">
               <a class="nav-link js-scroll-trigger" href="#services-section">Eventos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portafolio-section">Portafolio</a>
+            <li class="nav-item" v-on:click="navigate()">
+              <a class="nav-link js-scroll-trigger" href="/#portafolio-section">Portafolio</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-on:click="navigate()">
               <a class="nav-link js-scroll-trigger" href="#about-section">Linea de Tiempo</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-on:click="navigate()">
               <a class="nav-link js-scroll-trigger" href="#team-section">Socios</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" v-on:click="navigate()">
               <a class="nav-link js-scroll-trigger" href="#contact-section">Contacto</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  </v-app>
+  </div>
 </template>
 
 <script>
@@ -67,7 +67,6 @@ export default {
     $(window).scroll(function(event) {
       var scrollTop = $(window).scrollTop();
       //console.log("Vertical " + scrollTop);
-
       if(scrollTop > 180) {
         // Agregar clase al navbar
         $("#mainNav").addClass("navbar-shrink");
@@ -76,7 +75,15 @@ export default {
         $("#mainNav").removeClass("navbar-shrink");
       }
     });
-  }
+  },
+  methods: {
+    navigate() {
+      console.log();
+      if(this.$route.path != '/') {
+        this.$router.push('home');
+      }
+    }
+  } 
 };
 </script>
 
